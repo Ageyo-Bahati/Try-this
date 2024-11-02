@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cinzel', serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0d0335, #13012d, #29004e);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: rgba(20, 20, 20, 0.9);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 25px rgba(245, 200, 66, 0.8);
+  max-width: 400px;
+  width: 90%;
+}
+
+.title {
+  font-size: 2.8em;
+  color: #fdd835;
+  text-shadow: 0 0 10px #fdd835, 0 0 20px #ffab00;
+  animation: titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow {
+  from { text-shadow: 0 0 10px #fdd835, 0 0 20px #ffab00; }
+  to { text-shadow: 0 0 20px #ffab00, 0 0 30px #ff6f00; }
+}
+
+.level {
+  font-size: 1.5em;
+  color: #bb86fc;
+  margin-top: 10px;
+  text-shadow: 0 0 5px #bb86fc;
+}
+
+.hint {
+  font-size: 1.2em;
+  color: #82b1ff;
+  margin-top: 15px;
+  animation: hintPulse 1.5s infinite;
+}
+
+@keyframes hintPulse {
+  0%, 100% { color: #82b1ff; }
+  50% { color: #bbdefb; }
+}
+
+#passwordInput {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 1.1em;
+  color: #ffffff;
+  background: rgba(60, 60, 60, 0.9);
+  border: 1px solid #bb86fc;
+  border-radius: 8px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+#passwordInput:focus {
+  outline: none;
+  box-shadow: 0 0 12px #bb86fc;
+}
+
+#revealButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  color: #ffffff;
+  background-color: #6200ea;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px #6200ea;
+}
+
+#revealButton:hover {
+  background-color: #3700b3;
+  box-shadow: 0 0 20px #bb86fc, 0 0 30px #3700b3;
+}
+
+#secretMessage {
+  margin-top: 25px;
+  font-size: 1.5em;
+  color: #ff1744;
+  text-shadow: 0 0 10px #ff1744, 0 0 20px #ff5252;
+  animation: messageAppear 1s forwards;
+}
+
+@keyframes messageAppear {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Music Controls */
+.music-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.music-controls button {
+  padding: 8px 14px;
+  font-size: 0.9em;
+  color: #ffffff;
+  background: rgba(98, 0, 234, 0.8);
+  border: 1px solid #bb86fc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.music-controls button:hover {
+  background-color: rgba(187, 134, 252, 0.9);
+  box-shadow: 0 0 10px rgba(187, 134, 252, 0.6);
+}
